@@ -100,10 +100,10 @@ export default function SignUp() {
               </button>
 
               <nav className="signup-nav">
-                <a href="/login">로그인</a>
-                <span> | </span>
-                <a hre  f="/login" className="signup-nav-link">
-                  이미 회원이신가요?
+                <span href="/login">이미 회원이신가요?</span>
+                <span className="signup-nav-separator"> | </span>
+                <a href="/login" className="signup-nav-link">
+                  로그인
                 </a>
               </nav>
             </div>
