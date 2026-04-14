@@ -71,41 +71,12 @@ export default function SignUp() {
                 />
               </div>
 
-              <div className="signup-field">
-                <label htmlFor="name-input">이름</label>
-                <input
-                  id="name-input"
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="이름을 입력하세요"
-                />
-              </div>
-
-              <div className="signup-field">
-                <label htmlFor="birth-input">생년월일</label>
-                <input
-                  id="birth-input"
-                  type="text"
-                  required
-                  value={birth}
-                  onChange={(e) => setBirth(e.target.value)}
-                  placeholder="생년월일 8자리"
-                />
-              </div>
 
               <button type="submit" className="signup-submit">
-                회원가입
+                로그인
               </button>
 
-              <nav className="signup-nav">
-                <span>이미 회원이신가요?</span>
-                <span className="signup-nav-separator"> | </span>
-                <a href="/SignIn.jsx" className="signup-nav-link">
-                  로그인
-                </a>
-              </nav>
+              
             </div>
           </form>
         </div>

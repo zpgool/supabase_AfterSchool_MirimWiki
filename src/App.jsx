@@ -1,4 +1,4 @@
-import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <div className="flex justify-center">
-      <SignUp/>
+      <SignIn/>
       </div>
      
     </>
