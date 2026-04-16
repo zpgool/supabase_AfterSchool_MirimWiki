@@ -3,26 +3,20 @@ import "./index.css";
 import Mirim from "./assets/Mirim.png";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { signUp } from "./api/auth";
+import { signIn } from "./api/auth";
 
-export default function SignUp() {
+export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [birth, setBirth] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { data, error } = await signUp(email, password, name, birth);
+    const { data, error } = await signIn(email, password);
     if (error) {
       toast.error(error.message);
       return;
     }
-    toast.success("회원가입 성공! 이메일을 확인하세요.");
-    setEmail("");
-    setPassword("");
-    setName("");
-    setBirth("");
+    toast.success("로그인 성공! 이메일을 확인하세요.");
   };
 
   return (
@@ -72,39 +66,15 @@ export default function SignUp() {
                 />
               </div>
 
-              <div className="signup-field">
-                <label htmlFor="name-input">이름</label>
-                <input
-                  id="name-input"
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="이름을 입력하세요"
-                />
-              </div>
-
-              <div className="signup-field">
-                <label htmlFor="birth-input">생년월일</label>
-                <input
-                  id="birth-input"
-                  type="text"
-                  required
-                  value={birth}
-                  onChange={(e) => setBirth(e.target.value)}
-                  placeholder="생년월일 8자리"
-                />
-              </div>
-
               <button type="submit" className="signup-submit">
-                회원가입
+                로그인
               </button>
 
               <nav className="signup-nav">
-                <span href="/login">이미 회원이신가요?</span>
+                <span href="/login">아직 회원이 아니신가요?</span>
                 <span className="signup-nav-separator"> | </span>
-                <Link to="/login" href="/login" className="signup-nav-link">
-                  로그인
+                <Link to="/signup" href="/login" className="signup-nav-link">
+                  회원가입
                 </Link>
               </nav>
             </div>
