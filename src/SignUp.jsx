@@ -34,15 +34,6 @@ export default function SignUp() {
 
       <div className="signup-page">
         <div className="signup-main">
-          <div className="signup-logo">
-            <img src={Mirim} alt="미림마이스터고 로고" />
-            <div className="signup-logo-text">
-              <span className="signup-head-title">MirimWiki</span>
-              <span className="signup-logo-subtitle">
-                NEWMEDIA CONTENTS <span>MIRIM MEISTER SCHOOL</span>
-              </span>
-            </div>
-          </div>
 
           <form onSubmit={handleSubmit}>
             <div className="signup-card">
@@ -101,9 +92,13 @@ export default function SignUp() {
               </button>
 
               <nav className="signup-nav">
-                <span href="/login">이미 회원이신가요?</span>
+                <span>이미 회원이신가요?</span>
                 <span className="signup-nav-separator"> | </span>
+<<<<<<< HEAD
                 <Link to="/login" href="/login" className="signup-nav-link">
+=======
+                <a href="/SignIn.jsx" className="signup-nav-link">
+>>>>>>> main
                   로그인
                 </Link>
               </nav>

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+>>>>>>> main
 import "./index.css";
 import Mirim from "./assets/Mirim.png";
 import { useState } from "react";
@@ -16,7 +19,13 @@ export default function SignIn() {
       toast.error(error.message);
       return;
     }
+<<<<<<< HEAD
     toast.success("로그인 성공! 이메일을 확인하세요.");
+=======
+    toast.success("로그인 성공!");
+    setEmail("");
+    setPassword("");
+>>>>>>> main
   };
 
   return (
@@ -71,11 +80,19 @@ export default function SignIn() {
               </button>
 
               <nav className="signup-nav">
+<<<<<<< HEAD
                 <span href="/login">아직 회원이 아니신가요?</span>
                 <span className="signup-nav-separator"> | </span>
                 <Link to="/signup" href="/login" className="signup-nav-link">
                   회원가입
                 </Link>
+=======
+                <span>아직 회원이 아니신가요?</span>
+                <span className="signup-nav-separator"> | </span>
+                <a  href="/SignUp.jsx" className="signup-nav-link">
+                  회원가입
+                </a>
+>>>>>>> main
               </nav>
             </div>
           </form>
