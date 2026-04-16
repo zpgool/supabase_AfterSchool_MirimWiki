@@ -33,15 +33,6 @@ export default function SignUp() {
 
       <div className="signup-page">
         <div className="signup-main">
-          <div className="signup-logo">
-            <img src={Mirim} alt="미림마이스터고 로고" />
-            <div className="signup-logo-text">
-              <span className="signup-head-title">MirimWiki</span>
-              <span className="signup-logo-subtitle">
-                NEWMEDIA CONTENTS <span>MIRIM MEISTER SCHOOL</span>
-              </span>
-            </div>
-          </div>
 
           <form onSubmit={handleSubmit}>
             <div className="signup-card">

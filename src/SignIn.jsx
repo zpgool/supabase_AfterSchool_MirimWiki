@@ -2,26 +2,22 @@ import "./index.css";
 import Mirim from "./assets/Mirim.png";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { signUp } from "./api/auth";
+import { signIn } from "./api/auth";
 
-export default function SignUp() {
+export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [birth, setBirth] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { data, error } = await signUp(email, password, name, birth);
+    const { data, error } = await signIn(email, password);
     if (error) {
       toast.error(error.message);
       return;
     }
-    toast.success("회원가입 성공! 이메일을 확인하세요.");
+    toast.success("로그인 성공!");
     setEmail("");
     setPassword("");
-    setName("");
-    setBirth("");
   };
 
   return (
@@ -71,12 +67,17 @@ export default function SignUp() {
                 />
               </div>
 
-
               <button type="submit" className="signup-submit">
                 로그인
               </button>
 
-              
+              <nav className="signup-nav">
+                <span>아직 회원이 아니신가요?</span>
+                <span className="signup-nav-separator"> | </span>
+                <a  href="/SignUp.jsx" className="signup-nav-link">
+                  회원가입
+                </a>
+              </nav>
             </div>
           </form>
         </div>
