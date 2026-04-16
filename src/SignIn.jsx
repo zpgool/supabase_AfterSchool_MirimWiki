@@ -3,7 +3,6 @@ import Mirim from "./assets/Mirim.png";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { signIn } from "./api/auth";
-import { Link, useNavigate } from 'react-router-dom'; 
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
