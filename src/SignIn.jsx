@@ -3,6 +3,7 @@ import Mirim from "./assets/Mirim.png";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { signIn } from "./api/auth";
+import { Link, useNavigate } from 'react-router-dom' 
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -74,9 +75,9 @@ export default function SignIn() {
               <nav className="signup-nav">
                 <span>아직 회원이 아니신가요?</span>
                 <span className="signup-nav-separator"> | </span>
-                <a  href="/SignUp.jsx" className="signup-nav-link">
+                <Link to="/SignUp" className="signup-nav-link">
                   회원가입
-                </a>
+                </Link>
               </nav>
             </div>
           </form>
